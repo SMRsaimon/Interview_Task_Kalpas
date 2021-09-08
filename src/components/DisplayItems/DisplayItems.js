@@ -5,7 +5,7 @@ import './DisplayItems.scss';
 
 const DisplayItems = ({ loadData, viewStyle }) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const itemPerPage = 34;
+  const itemPerPage = 5;
   const pages = [];
   for (let i = 1; i <= Math.ceil(loadData.length / itemPerPage); i++) {
     pages.push(i);

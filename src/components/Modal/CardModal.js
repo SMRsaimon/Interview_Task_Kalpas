@@ -1,8 +1,10 @@
 import React, { memo } from 'react';
 import DefaultImg from '../../assets/images/default.jpg';
-import { TOGGLE_DATA } from '../../state/actions';
+import { TOGGLE_DATA } from '../../Reducer/actions';
 
 const CardModal = ({ state, dispatch }) => {
+
+
   return (
     <>
       {state.toggleModal ? (
@@ -10,11 +12,12 @@ const CardModal = ({ state, dispatch }) => {
           <div className="modalInner">
             <img
               src={
-                state?.singleCard?.image ? state?.singleCard?.image : DefaultImg
+                 DefaultImg
               }
               alt=""
             />
             <h3>{state?.singleCard?.title}</h3>
+           
             <p>
               {state?.singleCard?.body &&
                 state?.singleCard?.body.substr(0, 350)}

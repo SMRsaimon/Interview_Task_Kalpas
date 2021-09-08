@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import { TOGGLE_DATA, TOGGLE_VIEW } from '../../state/actions';
+import { TOGGLE_DATA, TOGGLE_VIEW } from '../../Reducer/actions';
 import Profile from './Profile';
 import './Sidebar.scss';
 

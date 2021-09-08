@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import { TOGGLE_DATA } from '../../state/actions';
+import { TOGGLE_DATA } from '../../Reducer/actions';
 import FeedbackForm from '../FeedbackForm/FeedbackForm';
 import Profile from '../Sidebar/Profile';
 

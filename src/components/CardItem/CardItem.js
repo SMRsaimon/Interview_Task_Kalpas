@@ -3,11 +3,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useContext } from 'react';
 import DefaultImg from '../../assets/images/default.jpg';
 import { ViewContext } from '../../Contexts/ViewContextProvider';
-import { DELETE_DATA, STORE_DATA, TOGGLE_DATA } from '../../state/actions';
+import { DELETE_DATA, STORE_DATA, TOGGLE_DATA } from '../../Reducer/actions';
 
 const CardItem = ({ item }) => {
   const { state, dispatch } = useContext(ViewContext);
   const { id, title, summary, link, image, published } = item;
+
+
+  console.log(item)
   const handleDeleteItems = (id) => {
     dispatch({
       type: DELETE_DATA,
@@ -29,7 +32,7 @@ const CardItem = ({ item }) => {
     <div className="item">
       <div className="cardBody" onClick={() => handleViewCard(id)}>
         <div className="img">
-          <img src={image ? image : DefaultImg} alt="img" />
+          <img src={DefaultImg} alt="img" />
         </div>
         <div className="itemContent">
           <h3>{title}</h3>

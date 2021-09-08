@@ -5,7 +5,7 @@ import Feedback from './components/Feedback/Feedback';
 import CardModal from './components/Modal/CardModal';
 import Sidebar from './components/Sidebar/Sidebar';
 import { ViewContext } from './Contexts/ViewContextProvider';
-import { STORE_DATA } from './state/actions';
+import { STORE_DATA } from './Reducer/actions';
 import './style/global.scss';
 const App = () => {
   const { state, dispatch } = useContext(ViewContext);
