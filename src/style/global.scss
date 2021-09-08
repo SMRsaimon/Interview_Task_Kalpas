@@ -131,6 +131,20 @@
     max-width: 65%;
     .form-group {
       margin: 10px 0;
+      input,textarea{
+        box-shadow: 0 0 20pt 3pt #D3D3D3;
+        border: none;
+        border-radius: 10px;
+
+      }
     }
   }
+  
+}
+
+.btn-success {
+  color: #fff;
+  background-color: #5ac593fc;
+  /* border-color: #198754; */
+  border: none;
 }
