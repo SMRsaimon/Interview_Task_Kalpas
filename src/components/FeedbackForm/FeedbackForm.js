@@ -89,8 +89,11 @@ const FeedbackForm = () => {
               name="email"
               ref={register({ required: true, pattern: /\S+@\S+\.\S+/ })}
             />
-            {errors.email && (
-              <span style={{ color: "red" }}>Required field</span>
+            {errors.email && errors.email.type === "required" && (
+              <span style={{ color: "red" }}>Email is Required </span>
+            )}
+            {errors.email && errors.email.type === "pattern" && (
+              <span style={{ color: "red" }}>Enter a Valied Email</span>
             )}
           </div>
           <div className="form-group">
