@@ -7,10 +7,10 @@ import { DELETE_DATA, STORE_DATA, TOGGLE_DATA } from '../../Reducer/actions';
 
 const CardItem = ({ item }) => {
   const { state, dispatch } = useContext(ViewContext);
-  const { id, title, summary, link, image, published } = item;
+  const { id, title, body } = item;
 
 
-  console.log(item)
+
   const handleDeleteItems = (id) => {
     dispatch({
       type: DELETE_DATA,
@@ -37,11 +37,11 @@ const CardItem = ({ item }) => {
         <div className="itemContent">
           <h3>{title}</h3>
           {state.viewStyle === 'grid' ? (
-            <p>{summary?.substr(0, 60)}</p>
+            <p>{body?.substr(0, 80)}</p>
           ) : (
-            <p>{summary?.substr(0, 100)}</p>
+            <p>{body?.substr(0, 100)}</p>
           )}
-          <span>{published}</span>
+         <span>{new Date().toLocaleDateString()}</span>
         </div>
       </div>
       <div className="delete" onClick={() => handleDeleteItems(id)}>
