@@ -1,3 +1,5 @@
+import { faBorderNone, faList } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { memo } from 'react';
 import { TOGGLE_DATA, TOGGLE_VIEW } from '../../Reducer/actions';
 import Profile from './Profile';
@@ -17,7 +19,8 @@ const Sidebar = ({ dispatch, state }) => {
               dispatch({ type: TOGGLE_VIEW, payload: { data: 'grid' } });
             }}
           >
-            Grid
+            <FontAwesomeIcon icon={faBorderNone} />
+           
           </button>
           <button
             className="listButton"
@@ -26,7 +29,7 @@ const Sidebar = ({ dispatch, state }) => {
               dispatch({ type: TOGGLE_VIEW, payload: { data: 'list' } });
             }}
           >
-            List
+            <FontAwesomeIcon icon={faList} />
           </button>
         </div>
       </div>
