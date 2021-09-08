@@ -8,7 +8,7 @@ import './index.scss';
 ReactDOM.render(
   <React.StrictMode>
     <ViewContextProvider>
-      <App></App>
+      <App/>
     </ViewContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
