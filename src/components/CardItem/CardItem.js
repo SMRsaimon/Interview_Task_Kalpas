@@ -35,7 +35,7 @@ const CardItem = ({ item }) => {
           <img src={DefaultImg} alt="img" />
         </div>
         <div className="itemContent">
-          <h3>{title}</h3>
+          <h3 className="text-capitalize">{title}</h3>
           {state.viewStyle === 'grid' ? (
             <p>{body?.substr(0, 80)}</p>
           ) : (

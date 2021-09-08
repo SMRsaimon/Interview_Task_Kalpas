@@ -16,7 +16,7 @@ const CardModal = ({ state, dispatch }) => {
               }
               alt=""
             />
-            <h3>{state?.singleCard?.title}</h3>
+            <h3 className="text-capitalize">{state?.singleCard?.title}</h3>
            
             <p>
               {state?.singleCard?.body &&
